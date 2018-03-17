@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    private float health = 100;
+    public float health = 100;
 	// Use this for initialization
 	void Start () {
 		
@@ -35,8 +35,12 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    private void KillObject()
+    void KillObject()
     {
-        //TODO: add in death logic
+        if(this.GetComponent<BossTeleport>() || this.GetComponent<JumpBoss>())
+        {
+            //go to next scene here
+        }
+        Destroy(this.transform);
     }
 }
