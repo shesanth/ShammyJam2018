@@ -34,7 +34,7 @@ public class JumpBoss : MonoBehaviour {
         if (!isJumping)
         {
             //distance the boss will move towards the player
-            float moveX = Random.Range(0, Mathf.Abs(xDistToPlayer) + 2) * faceLeft;
+            float moveX = Random.Range(Mathf.Abs(xDistToPlayer)/4, Mathf.Abs(xDistToPlayer) + 2) * faceLeft;
             StartCoroutine(Jump(moveX));
         }
 

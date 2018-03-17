@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 65290794915833300}
   - component: {fileID: 114671781611200704}
   - component: {fileID: 114896877603939518}
+  - component: {fileID: 114475489784916082}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -116,7 +117,7 @@ BoxCollider:
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114475489784916082
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728865711806496}
