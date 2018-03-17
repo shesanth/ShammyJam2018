@@ -8,7 +8,7 @@ public class StrengthBoss : MonoBehaviour {
     public List<GameObject> TileTypes;
 
     public float timeBetweenTiles = 8f;
-    float nextTilesIn = 20f;
+    float nextTilesIn = 0f;
 
     public float distanceBetweenTiles;
 

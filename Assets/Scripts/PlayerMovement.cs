@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     public float dJumpModifier = 0.9f;//float that modifies the height of dj compared to jump
 
     //teleport
-    public float teleportDistance = 3f;
+    public float teleportDistance = 5f;
     public float teleportDelay = 1.5f;
     float nextTeleportAvailable = 0;
 
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         {
             nextTeleportAvailable = teleportDelay;
             Vector3 teleport = this.transform.position;
-            teleport.x = (directionFacing * teleportDistance);
+            teleport.x += (directionFacing * teleportDistance);
             RaycastHit hit;
             if (Physics.Raycast(this.transform.position, directionFacing * Vector3.right, out hit, teleportDistance))
             {
