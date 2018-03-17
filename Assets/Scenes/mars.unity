@@ -525,16 +525,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 136633924621314178, guid: f386d6093f83f427c9ab73ec12abaf05,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65290794915833300, guid: f386d6093f83f427c9ab73ec12abaf05,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f386d6093f83f427c9ab73ec12abaf05, type: 2}
   m_IsPrefabParent: 0
@@ -543,15 +533,3 @@ GameObject:
   m_PrefabParentObject: {fileID: 1728865711806496, guid: f386d6093f83f427c9ab73ec12abaf05,
     type: 2}
   m_PrefabInternal: {fileID: 1300770776}
---- !u!114 &1667090837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1667090836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5bdf12ffb349ca45af193398cf574a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iTime: 2
