@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 200235592}
   - component: {fileID: 200235591}
   - component: {fileID: 200235595}
-  - component: {fileID: 200235596}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -209,22 +208,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dampTime: 0.15
   distAllow: 8
-  moveVelocity: 15
---- !u!54 &200235596
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 200235590}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1007468521
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +382,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1309041814}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5a17d2517054f024d819d5d4fc74b6f8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -499,7 +482,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1379250490}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5a17d2517054f024d819d5d4fc74b6f8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -567,7 +550,7 @@ Prefab:
     - target: {fileID: 114671781611200704, guid: f386d6093f83f427c9ab73ec12abaf05,
         type: 2}
       propertyPath: jumpHeight
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114671781611200704, guid: f386d6093f83f427c9ab73ec12abaf05,
         type: 2}
@@ -579,6 +562,17 @@ Prefab:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 54891582940137254, guid: f386d6093f83f427c9ab73ec12abaf05,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136633924621314178, guid: f386d6093f83f427c9ab73ec12abaf05,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 5a17d2517054f024d819d5d4fc74b6f8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f386d6093f83f427c9ab73ec12abaf05, type: 2}
   m_IsPrefabParent: 0
@@ -721,7 +715,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1580273936}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5a17d2517054f024d819d5d4fc74b6f8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -775,7 +769,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 100000
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -821,7 +815,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1916126352}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5a17d2517054f024d819d5d4fc74b6f8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
