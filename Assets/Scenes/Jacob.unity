@@ -350,6 +350,7 @@ GameObject:
   - component: {fileID: 953351592}
   - component: {fileID: 953351591}
   - component: {fileID: 953351596}
+  - component: {fileID: 953351597}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -457,6 +458,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1985831202774162, guid: 20f5d51e96d0342479805ef360ad9ae8, type: 2}
   bulletSpeed: 5
+--- !u!114 &953351597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 953351590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0381681cbdbcfa43ad5e3eebe73c99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1114715564
 GameObject:
   m_ObjectHideFlags: 0
