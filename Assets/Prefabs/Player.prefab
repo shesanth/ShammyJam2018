@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728865711806496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 1.2, z: 0}
+  m_LocalPosition: {x: -22.48, y: -9.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,10 +97,10 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!65 &65290794915833300
@@ -117,7 +117,7 @@ BoxCollider:
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114475489784916082
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728865711806496}
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05563c87a97aa486e8e9fc8f40970cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 20
+  maxSpeed: 10
   acceleration: 35
   animCurve:
     serializedVersion: 2
@@ -159,39 +159,34 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   directionFacing: 1
-  jumpTime: 0.5
-  jumpHeight: 2.5
-  maxFallSpeed: 5
+  jumpPower: 15
+  jumpTime: 0.3
+  jumpHeight: 2
+  maxFallSpeed: 20
   gravCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
-      value: -0.004180908
+      time: -0.004737854
+      value: 1.0012741
       inSlope: 2
       outSlope: 2
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.13437687
-      value: 1.014496
-      inSlope: -0.07465482
-      outSlope: -0.07465482
+      time: 0.1675471
+      value: 0.45461643
+      inSlope: -0.24750613
+      outSlope: -0.24750613
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.574499
-      value: 1.0088996
-      inSlope: 0.008940697
-      outSlope: 0.008940697
+      time: 0.31515563
+      value: 0.48865622
+      inSlope: 2.4783611
+      outSlope: 2.4783611
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.65391153
-      value: 0.9839399
-      inSlope: -1.7309189
-      outSlope: -1.7309189
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.9999819
-      value: -0.019495402
+      time: 0.39640522
+      value: 0.9903351
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -206,6 +201,7 @@ MonoBehaviour:
   dJumpModifier: 0.8
   teleportDistance: 3
   teleportDelay: 1.5
+  shootDelay: 0.5
 --- !u!114 &114896877603939518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,7 +221,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728865711806496}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5a17d2517054f024d819d5d4fc74b6f8, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5

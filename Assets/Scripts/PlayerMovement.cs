@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public int directionFacing = 1;//1 is right, -1 is left
 
     //Vertical
+    public float jumpPower = 3f;
     public float jumpTime = .5f;
     public float jumpHeight = 2.5f;
     public float maxFallSpeed = 5f;
@@ -113,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = rigid.velocity;
 
         //Horizontal Movement
-        float xInput = Input.GetAxisRaw("Horizontal");
+        float xInput = Input.GetAxis("Horizontal");
         if (xInput > 0)
         {
             directionFacing = 1;
@@ -122,17 +123,19 @@ public class PlayerMovement : MonoBehaviour
         {
             directionFacing = -1;
         }
+        /*
         float targetSpeed = xInput * maxSpeed;
         float xDiff = targetSpeed - velocity.x;
         float thisAcceleration = acceleration * animCurve.Evaluate(Mathf.Abs(xDiff / maxSpeed));
         float xStep = Mathf.Sign(xDiff) *
             Mathf.Min(Mathf.Abs(xDiff), thisAcceleration * Time.deltaTime);
-        velocity.x += xStep;
+        */
+        velocity.x = xInput * maxSpeed;
 
         //Gravity	
-        float jumpPower = 2 * jumpHeight / jumpTime;
-        float gravity = -2 * jumpHeight / (jumpTime * jumpTime);
-        gravity *= gravCurve.Evaluate(velocity.y / jumpPower);
+        //float jumpPower = 2 * jumpHeight / jumpTime;
+        //float gravity = -5 * jumpHeight / (jumpTime * jumpTime);
+        float gravity = -10 * gravCurve.Evaluate(velocity.y / jumpPower);
         if (!Input.GetButton("Jump") && velocity.y > variableJumpCutoffSpeed)
         {
             gravity *= 5;
