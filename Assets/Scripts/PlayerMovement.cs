@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
 
 
     //Double Jump Variables
-    [HideInInspector]
     public bool unLockedJump = false;//bool if double jump abality unlocked
     private bool hasDoubleJump = true;//used to control if dj is used
     public float dJumpModifier = 0.9f;//float that modifies the height of dj compared to jump
@@ -152,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //double jump
-        else if (jumpBuffer > 0 && hasDoubleJump)
+        else if (jumpBuffer > 0 && hasDoubleJump && unLockedJump)
         {
             velocity.y = dJumpModifier * jumpPower;
             jumpBuffer = 0;

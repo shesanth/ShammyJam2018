@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -37,7 +38,8 @@ public class PlayerHealth : MonoBehaviour
     //handles players death
     public void KillPlayer()
     {
-        return;
+        string scenename = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(scenename);
     }
 
     private IEnumerator GiveIFrames()
