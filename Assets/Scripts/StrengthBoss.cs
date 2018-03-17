@@ -12,10 +12,17 @@ public class StrengthBoss : MonoBehaviour {
 
     public float distanceBetweenTiles;
 
-	// Use this for initialization
-	void Awake() {
-		
-	}
+    // Use this for initialization
+    void Awake()
+    {
+        Vector3 newPos = this.transform.position;
+        newPos.x += 10;
+        spawnPositions.Add(newPos);
+        newPos.y += 5;
+        spawnPositions.Add(newPos);
+        newPos.y += 5;
+        spawnPositions.Add(newPos);
+    }
 	
 	// Update is called once per frame
 	void Update () {
