@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 764108823}
   - component: {fileID: 764108822}
   - component: {fileID: 764108821}
+  - component: {fileID: 764108828}
   m_Layer: 0
   m_Name: JumpBoss
   m_TagString: Untagged
@@ -291,13 +292,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 764108820}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99e493b16b409ff468ad2af9a2c6e10c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  averageJumpTime: 0.5
-  player: {fileID: 0}
+  averageJumpTime: 0.75
+  player: {fileID: 1667090836}
   maxMoveDist: 6
 --- !u!65 &764108822
 BoxCollider:
@@ -393,6 +394,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764108828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 764108820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0381681cbdbcfa43ad5e3eebe73c99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1094410518
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,3 +528,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f386d6093f83f427c9ab73ec12abaf05, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1667090836 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1728865711806496, guid: f386d6093f83f427c9ab73ec12abaf05,
+    type: 2}
+  m_PrefabInternal: {fileID: 1300770776}

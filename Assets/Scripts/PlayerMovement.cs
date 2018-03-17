@@ -2,28 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
-	Rigidbody rigid;
+    Rigidbody rigid;
 
-	//Horizontal
-	public float maxSpeed = 20f;
-	public float acceleration = 35f;
-	public AnimationCurve animCurve;
+    //Horizontal
+    public float maxSpeed = 20f;
+    public float acceleration = 35f;
+    public AnimationCurve animCurve;
+    [HideInInspector]
+    public int directionFacing = 1;//1 is right, -1 is left
 
-	//Vertical
-	public float jumpTime = .5f;
-	public float jumpHeight = 2.5f;
-	public float maxFallSpeed = 5f;
-	public AnimationCurve gravCurve;
-	public float variableJumpCutoffSpeed = 1f;
+    //Vertical
+    public float jumpTime = .5f;
+    public float jumpHeight = 2.5f;
+    public float maxFallSpeed = 5f;
+    public AnimationCurve gravCurve;
+    public float variableJumpCutoffSpeed = 1f;
 
-	//Buffers
-	public float groundedSlope = .75f;
-	public float maxGroundedBuffer = .2f;
-	float groundedBuffer = 0f;
-	public float maxJumpBuffer = .2f;
-	float jumpBuffer = 0;
+    //Buffers
+    public float groundedSlope = .75f;
+    public float maxGroundedBuffer = .2f;
+    float groundedBuffer = 0f;
+    public float maxJumpBuffer = .2f;
+    float jumpBuffer = 0;
 
 
     //Double Jump Variables
@@ -32,48 +35,70 @@ public class PlayerMovement : MonoBehaviour {
     private bool hasDoubleJump = true;//used to control if dj is used
     public float dJumpModifier = 0.9f;//float that modifies the height of dj compared to jump
 
+    Shoot playerShoot;
 
-	// Use this for initialization
-	void Awake () {
-		rigid = this.GetComponent<Rigidbody>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetButtonDown("Jump")) {
-			jumpBuffer = maxJumpBuffer;
-		}
-	}
 
-	void FixedUpdate() {
-		Vector3 velocity = rigid.velocity;
+    // Use this for initialization
+    void Awake()
+    {
+        rigid = this.GetComponent<Rigidbody>();
+        playerShoot = this.GetComponent<Shoot>();
+    }
 
-		//Horizontal Movement
-		float xInput = Input.GetAxisRaw("Horizontal");
-		float targetSpeed = xInput * maxSpeed;
-		float xDiff = targetSpeed - velocity.x;
-		float thisAcceleration = acceleration * animCurve.Evaluate(Mathf.Abs(xDiff / maxSpeed));
-		float xStep = Mathf.Sign(xDiff) *
-			Mathf.Min(Mathf.Abs(xDiff), thisAcceleration * Time.deltaTime);
-		velocity.x += xStep;
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpBuffer = maxJumpBuffer;
+        }
 
-		//Gravity	
-		float jumpPower = 2 * jumpHeight / jumpTime;
-		float gravity = -2 * jumpHeight / (jumpTime * jumpTime);
-		gravity *= gravCurve.Evaluate(velocity.y / jumpPower);
-		if (!Input.GetButton("Jump") && velocity.y > variableJumpCutoffSpeed) {
-			gravity *= 5;
-		}
-		velocity.y += gravity * Time.deltaTime;
-		velocity.y = Mathf.Max(velocity.y, -maxFallSpeed);
+        if (Input.GetButtonDown("Fire1"))
+        {
+            playerShoot.DoShoot();
+        }
+    }
 
-		// Jump
-		if (jumpBuffer > 0 && groundedBuffer > 0) 	{
-			velocity.y = jumpPower;
-			jumpBuffer = 0;
-			groundedBuffer = 0;
-		} 
-        
+    void FixedUpdate()
+    {
+        Vector3 velocity = rigid.velocity;
+
+        //Horizontal Movement
+        float xInput = Input.GetAxisRaw("Horizontal");
+        if (xInput > 0)
+        {
+            directionFacing = 1;
+        }
+        else if (xInput < 0)
+        {
+            directionFacing = -1;
+        }
+        float targetSpeed = xInput * maxSpeed;
+        float xDiff = targetSpeed - velocity.x;
+        float thisAcceleration = acceleration * animCurve.Evaluate(Mathf.Abs(xDiff / maxSpeed));
+        float xStep = Mathf.Sign(xDiff) *
+            Mathf.Min(Mathf.Abs(xDiff), thisAcceleration * Time.deltaTime);
+        velocity.x += xStep;
+
+        //Gravity	
+        float jumpPower = 2 * jumpHeight / jumpTime;
+        float gravity = -2 * jumpHeight / (jumpTime * jumpTime);
+        gravity *= gravCurve.Evaluate(velocity.y / jumpPower);
+        if (!Input.GetButton("Jump") && velocity.y > variableJumpCutoffSpeed)
+        {
+            gravity *= 5;
+        }
+        velocity.y += gravity * Time.deltaTime;
+        velocity.y = Mathf.Max(velocity.y, -maxFallSpeed);
+
+        // Jump
+        if (jumpBuffer > 0 && groundedBuffer > 0)
+        {
+            velocity.y = jumpPower;
+            jumpBuffer = 0;
+            groundedBuffer = 0;
+        }
+
         //double jump
         else if (jumpBuffer > 0 && hasDoubleJump)
         {
@@ -82,16 +107,18 @@ public class PlayerMovement : MonoBehaviour {
             hasDoubleJump = false;
         }
 
-		rigid.velocity = velocity;
+        rigid.velocity = velocity;
 
-		jumpBuffer -= Time.deltaTime;
-		groundedBuffer -= Time.deltaTime;
-	}
+        jumpBuffer -= Time.deltaTime;
+        groundedBuffer -= Time.deltaTime;
+    }
 
-	void OnCollisionStay(Collision collision){
-		if (Vector3.Dot(collision.contacts[0].normal, Vector3.up) > groundedSlope && rigid.velocity.y <= 0) {
-			groundedBuffer = maxGroundedBuffer;
+    void OnCollisionStay(Collision collision)
+    {
+        if (Vector3.Dot(collision.contacts[0].normal, Vector3.up) > groundedSlope && rigid.velocity.y <= 0)
+        {
+            groundedBuffer = maxGroundedBuffer;
             hasDoubleJump = true;
-		}
-	}
+        }
+    }
 }
