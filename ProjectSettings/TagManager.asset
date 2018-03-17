@@ -15,10 +15,10 @@ TagManager:
   - 
   - Bullet
   - Characters
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - PlayerBullet
+  - EnemyBullet
   - 
   - 
   - 

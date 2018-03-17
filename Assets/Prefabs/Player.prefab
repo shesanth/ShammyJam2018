@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114671781611200704}
   - component: {fileID: 114896877603939518}
   - component: {fileID: 114475489784916082}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728865711806496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.7, y: -7.6, z: 0}
+  m_LocalPosition: {x: -7.4, y: -9.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8922dc26590259e42ae5e2fcba6c69c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1985831202774162, guid: 20f5d51e96d0342479805ef360ad9ae8, type: 2}
+  bullet: {fileID: 1944389527995356, guid: d19498c6af7c9be468541ddce08b0fe2, type: 2}
   bulletSpeed: 5
 --- !u!136 &136633924621314178
 CapsuleCollider:
