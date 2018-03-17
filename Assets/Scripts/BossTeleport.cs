@@ -24,7 +24,6 @@ public class BossTeleport : MonoBehaviour
     public List<GameObject> teleportPositions;
     int position = 0;
     int newPosition = 0;
-    public GameObject mapCenter;
 
     Transform player;
 
@@ -34,14 +33,6 @@ public class BossTeleport : MonoBehaviour
         nextTeleport = timeUntilTeleport;
         nextShot = shotDelay;
         this.transform.position = teleportPositions[0].transform.position;
-        if (mapCenter.transform.position.x > this.transform.position.x)
-        {
-            directionFacing = 1;
-        }
-        else
-        {
-            directionFacing = -1;
-        }
         player = FindObjectOfType<PlayerMovement>().transform;
     }
 
@@ -57,13 +48,6 @@ public class BossTeleport : MonoBehaviour
             }
 
             this.transform.position = teleportPositions[newPosition].transform.position;
-            if (mapCenter.transform.position.x > this.transform.position.x)
-            {
-                directionFacing = 1;
-            }else
-            {
-                directionFacing = -1;
-            }
             position = newPosition;
 
             nextTeleport = timeUntilTeleport;
