@@ -17,7 +17,6 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(health);
     }
 
     //callable function that deals damage to the player and activates iframes
