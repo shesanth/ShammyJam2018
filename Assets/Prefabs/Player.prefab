@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114671781611200704}
   - component: {fileID: 114896877603939518}
   - component: {fileID: 114475489784916082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,6 +204,8 @@ MonoBehaviour:
   maxJumpBuffer: 0.2
   unLockedJump: 0
   dJumpModifier: 0.8
+  teleportDistance: 3
+  teleportDelay: 1.5
 --- !u!114 &114896877603939518
 MonoBehaviour:
   m_ObjectHideFlags: 1

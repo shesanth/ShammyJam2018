@@ -17,9 +17,10 @@ public class Enemy : MonoBehaviour {
     private void OnTriggerEnter(Collider collision)
     {
         //check if collision is the player, if so, deal damage to the player
-        if (collision.gameObject.GetComponent<PlayerMovement>())
+        PlayerHealth h = collision.gameObject.GetComponent<PlayerHealth>();
+        if (h != null)
         {
-            collision.gameObject.GetComponent<PlayerHealth>().takeDamage(20.0f);
+            h.takeDamage(20.0f);
         }
     }
 

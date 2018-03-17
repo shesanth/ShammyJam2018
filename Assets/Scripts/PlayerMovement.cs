@@ -35,7 +35,15 @@ public class PlayerMovement : MonoBehaviour
     private bool hasDoubleJump = true;//used to control if dj is used
     public float dJumpModifier = 0.9f;//float that modifies the height of dj compared to jump
 
+    //teleport
+    public float teleportDistance = 3f;
+    public float teleportDelay = 1.5f;
+    float nextTeleportAvailable = 0;
+
+    //shooting
     Shoot playerShoot;
+    public float shootDelay = .5f;
+    float nextshotAvailable = 0;
 
 
     // Use this for initialization
@@ -53,9 +61,50 @@ public class PlayerMovement : MonoBehaviour
             jumpBuffer = maxJumpBuffer;
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (nextshotAvailable <= 0 && Input.GetButtonDown("Fire1"))//M1
         {
+            nextshotAvailable = shootDelay;
             playerShoot.DoShoot();
+        }
+
+        if (nextTeleportAvailable <= 0 && Input.GetButtonDown("Fire3"))//left shift
+        {
+            nextTeleportAvailable = teleportDelay;
+            Vector3 teleport = this.transform.position;
+            teleport.x = (directionFacing * teleportDistance);
+            RaycastHit hit;
+            if (Physics.Raycast(this.transform.position, directionFacing * Vector3.right, out hit, teleportDistance))
+            {
+                float hitAt = this.transform.position.x + (directionFacing * hit.distance);
+                if (directionFacing == -1)
+                {
+                    if (teleport.x <= hitAt && teleport.x >= hitAt + (directionFacing * hit.collider.bounds.size.x))//land in a wall i think
+                    {
+                        nextTeleportAvailable = 0;
+                    }
+                    else
+                    {
+                        this.transform.position = teleport;
+                    }
+                }
+                else
+                {
+                    if (teleport.x >= hitAt && teleport.x <= hitAt + (directionFacing * hit.collider.bounds.size.x))//land in a wall i think
+                    {
+                        nextTeleportAvailable = 0;
+                    }
+                    else
+                    {
+                        this.transform.position = teleport;
+                    }
+                }
+                
+                
+            }
+            else
+            {
+                this.transform.position = teleport;
+            }
         }
     }
 
@@ -109,8 +158,10 @@ public class PlayerMovement : MonoBehaviour
 
         rigid.velocity = velocity;
 
+        nextshotAvailable -= Time.deltaTime;
+        nextTeleportAvailable -= Time.deltaTime;
         jumpBuffer -= Time.deltaTime;
-        groundedBuffer -= Time.deltaTime;
+        groundedBuffer -= Time.deltaTime;       
     }
 
     void OnCollisionStay(Collision collision)
