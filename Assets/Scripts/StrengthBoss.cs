@@ -21,10 +21,23 @@ public class StrengthBoss : MonoBehaviour {
 	void Update () {
 		if(nextTilesIn <= 0)
         {
+            bool hasGround = false;
             nextTilesIn = timeBetweenTiles;
-            for(int i =0; i < spawnPositions.Count; i++)
+            for(int i = spawnPositions.Count - 1; i >= 0; i--)
             {
-                GameObject t = Instantiate(TileTypes[(int)Random.Range(0, TileTypes.Count - .01f)], spawnPositions[i], Quaternion.identity);
+                int tileType = (int)Random.Range(0, TileTypes.Count - .01f);
+                if(tileType == 1 || tileType == 3)
+                {
+                    hasGround = true;
+                }
+                if(i == 0 && !hasGround)
+                {
+                    GameObject t = Instantiate(TileTypes[3], spawnPositions[i], Quaternion.identity);
+                }
+                else
+                {
+                    GameObject t = Instantiate(TileTypes[tileType], spawnPositions[i], Quaternion.identity);
+                }
                 Vector3 update = spawnPositions[i];
                 update.x += distanceBetweenTiles;
                 spawnPositions[i] = update;

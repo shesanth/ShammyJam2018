@@ -15,7 +15,7 @@ public class DestroyOnHit : MonoBehaviour {
         {
             Enemy e = collision.GetComponent<Enemy>();
             if(e != null) {
-                //e.takeDamage(bulletDamage);
+                e.takeDamage(bulletDamage);
                 Destroy(this.gameObject);
             }     
         }
