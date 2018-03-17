@@ -64,11 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707d5bddb50753e46bfd71826e5b7167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPositions: []
   TileTypes:
   - {fileID: 1797278719432124, guid: 84316be73a733604b9a724ec5042fe15, type: 2}
   - {fileID: 1554091822063584, guid: ca73680c20cf2f14da08b73b800166f1, type: 2}
   - {fileID: 1304408300062252, guid: 280bc104c0545b74da637acdd0f378ce, type: 2}
   - {fileID: 1306055941628240, guid: 14563723494a56845a8caddd4590bb01, type: 2}
+  killBox: {fileID: 1878807062517390, guid: 3cd576cd68905e042aea0647c3668c76, type: 2}
   timeBetweenTiles: 2
   distanceBetweenTiles: 5

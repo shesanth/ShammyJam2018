@@ -7,6 +7,8 @@ public class SpawnStrengthBoss : MonoBehaviour {
     public GameObject strengthBossGenerator;
     GameObject player;
 
+    bool alreadyahppened = false;
+
     void Awake()
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
@@ -14,9 +16,11 @@ public class SpawnStrengthBoss : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject == player && !alreadyahppened)
         {
-            GameObject a = Instantiate(strengthBossGenerator,this.transform.position, Quaternion.identity);
+            alreadyahppened = true;
+            GameObject a = Instantiate(strengthBossGenerator, this.transform.position, Quaternion.identity);
+            //also spawn the actual boss and other stuff here, like health bar here
             Destroy(this.gameObject);
         }
     }
