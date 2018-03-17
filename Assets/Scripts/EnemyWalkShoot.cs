@@ -29,6 +29,14 @@ public class EnemyWalkShoot : MonoBehaviour {
         this.transform.position = startPosition.transform.position;
         target = FindObjectOfType<PlayerMovement>().transform;
         destination = endPosition.transform.position;
+        if(destination.x < this.transform.position.x)
+        {
+            directionFacing = -1;
+        }
+        else
+        {
+            directionFacing = 1;
+        }
     }
 
     void FixedUpdate()
