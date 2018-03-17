@@ -40,8 +40,10 @@ public class PlayerMovement : MonoBehaviour
     public float teleportDelay = 1.5f;
     float nextTeleportAvailable = 0;
 
-
+    //shooting
     Shoot playerShoot;
+    public float shootDelay = .5f;
+    float nextshotAvailable = 0;
 
 
     // Use this for initialization
@@ -59,8 +61,9 @@ public class PlayerMovement : MonoBehaviour
             jumpBuffer = maxJumpBuffer;
         }
 
-        if (Input.GetButtonDown("Fire1"))//M1
+        if (nextshotAvailable <= 0 && Input.GetButtonDown("Fire1"))//M1
         {
+            nextshotAvailable = shootDelay;
             playerShoot.DoShoot();
         }
 
@@ -155,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
 
         rigid.velocity = velocity;
 
+        nextshotAvailable -= Time.deltaTime;
         nextTeleportAvailable -= Time.deltaTime;
         jumpBuffer -= Time.deltaTime;
         groundedBuffer -= Time.deltaTime;       
