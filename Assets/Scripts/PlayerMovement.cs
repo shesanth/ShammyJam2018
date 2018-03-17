@@ -26,6 +26,13 @@ public class PlayerMovement : MonoBehaviour {
 	float jumpBuffer = 0;
 
 
+    //Double Jump Variables
+    [HideInInspector]
+    public bool unLockedJump = false;//bool if double jump abality unlocked
+    private bool hasDoubleJump = true;//used to control if dj is used
+    public float dJumpModifier = 0.9f;//float that modifies the height of dj compared to jump
+
+
 	// Use this for initialization
 	void Awake () {
 		rigid = this.GetComponent<Rigidbody>();
@@ -66,6 +73,14 @@ public class PlayerMovement : MonoBehaviour {
 			jumpBuffer = 0;
 			groundedBuffer = 0;
 		} 
+        
+        //double jump
+        else if (jumpBuffer > 0 && hasDoubleJump)
+        {
+            velocity.y = dJumpModifier * jumpPower;
+            jumpBuffer = 0;
+            hasDoubleJump = false;
+        }
 
 		rigid.velocity = velocity;
 
@@ -76,6 +91,7 @@ public class PlayerMovement : MonoBehaviour {
 	void OnCollisionStay(Collision collision){
 		if (Vector3.Dot(collision.contacts[0].normal, Vector3.up) > groundedSlope && rigid.velocity.y <= 0) {
 			groundedBuffer = maxGroundedBuffer;
+            hasDoubleJump = true;
 		}
 	}
 }
