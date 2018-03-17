@@ -3,15 +3,26 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   serializedVersion: 12
   productGUID: 060511bd59a579b46bf3065c1523b176
   AndroidProfiler: 0
+=======
+  serializedVersion: 14
+  productGUID: e3e61fde70be5431099154bb6b7a9bd0
+  AndroidProfiler: 0
+  AndroidFilterTouchesWhenObscured: 0
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: Tbartle's Aquatic Adventure
+=======
+  productName: Superhero Powerspike
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -38,8 +49,11 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos: []
+<<<<<<< HEAD
   m_SplashScreenBackgroundLandscape: {fileID: 0}
   m_SplashScreenBackgroundPortrait: {fileID: 0}
+=======
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -49,7 +63,10 @@ PlayerSettings:
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 0
   m_MTRendering: 1
+<<<<<<< HEAD
   m_MobileMTRendering: 0
+=======
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
@@ -63,14 +80,28 @@ PlayerSettings:
   allowedAutorotateToLandscapeLeft: 1
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
+<<<<<<< HEAD
   disableDepthAndStencilBuffers: 0
   defaultIsFullScreen: 1
   defaultIsNativeResolution: 1
+=======
+  preserveFramebufferAlpha: 0
+  disableDepthAndStencilBuffers: 0
+  androidBlitType: 0
+  defaultIsFullScreen: 1
+  defaultIsNativeResolution: 1
+  macRetinaSupport: 1
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   runInBackground: 0
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
+<<<<<<< HEAD
+=======
+  deferSystemGesturesMode: 0
+  hideHomeButton: 0
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   submitAnalytics: 1
   usePlayerLog: 1
   bakeCollisionMeshes: 0
@@ -89,12 +120,16 @@ PlayerSettings:
   allowFullscreenSwitch: 1
   graphicsJobMode: 0
   macFullscreenMode: 2
+<<<<<<< HEAD
   d3d9FullscreenMode: 1
+=======
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   d3d11FullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
   xboxEnablePIXSampling: 0
+<<<<<<< HEAD
   n3dsDisableStereoscopicView: 0
   n3dsEnableSharedListOpt: 1
   n3dsEnableVSync: 0
@@ -103,6 +138,19 @@ PlayerSettings:
   xboxOneMonoLoggingLevel: 0
   xboxOneLoggingLevel: 1
   xboxOneDisableEsram: 0
+=======
+  metalFramebufferOnly: 0
+  n3dsDisableStereoscopicView: 0
+  n3dsEnableSharedListOpt: 1
+  n3dsEnableVSync: 0
+  xboxOneResolution: 0
+  xboxOneSResolution: 0
+  xboxOneXResolution: 3
+  xboxOneMonoLoggingLevel: 0
+  xboxOneLoggingLevel: 1
+  xboxOneDisableEsram: 0
+  xboxOnePresentImmediateThreshold: 0
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   videoMemoryForVertexBuffers: 0
   psp2PowerMode: 0
   psp2AcquireBGM: 1
@@ -124,6 +172,10 @@ PlayerSettings:
   bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
+<<<<<<< HEAD
+=======
+  wsaTransparentSwapchain: 0
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0
   xboxOneEnable7thCore: 0
@@ -134,12 +186,32 @@ PlayerSettings:
     daydream:
       depthFormat: 0
       useSustainedPerformanceMode: 0
+<<<<<<< HEAD
     hololens:
       depthFormat: 1
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   targetPixelDensity: 0
   resolutionScalingMode: 0
+=======
+      enableVideoLayer: 0
+      useProtectedVideoMemory: 0
+      minimumSupportedHeadTracking: 0
+      maximumSupportedHeadTracking: 1
+    hololens:
+      depthFormat: 1
+      depthBufferSharingEnabled: 0
+    oculus:
+      sharedDepthBuffer: 0
+      dashSupport: 1
+  protectGraphicsMemory: 0
+  useHDRDisplay: 0
+  m_ColorGamuts: 00000000
+  targetPixelDensity: 30
+  resolutionScalingMode: 0
+  androidSupportedAspectRatio: 1
+  androidMaxAspectRatio: 2.1
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   applicationIdentifier: {}
   buildNumber: {}
   AndroidBundleVersionCode: 1
@@ -160,10 +232,17 @@ PlayerSettings:
     serializedVersion: 2
     m_Bits: 238
   iPhoneSdkVersion: 988
+<<<<<<< HEAD
   iOSTargetOSVersionString: 
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 
+=======
+  iOSTargetOSVersionString: 7.0
+  tvOSSdkVersion: 0
+  tvOSRequireExtendedGameController: 0
+  tvOSTargetOSVersionString: 9.0
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -176,15 +255,32 @@ PlayerSettings:
   iPhone47inSplashScreen: {fileID: 0}
   iPhone55inPortraitSplashScreen: {fileID: 0}
   iPhone55inLandscapeSplashScreen: {fileID: 0}
+<<<<<<< HEAD
+=======
+  iPhone58inPortraitSplashScreen: {fileID: 0}
+  iPhone58inLandscapeSplashScreen: {fileID: 0}
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   iPadPortraitSplashScreen: {fileID: 0}
   iPadHighResPortraitSplashScreen: {fileID: 0}
   iPadLandscapeSplashScreen: {fileID: 0}
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   appleTVSplashScreen: {fileID: 0}
+<<<<<<< HEAD
   tvOSSmallIconLayers: []
   tvOSLargeIconLayers: []
   tvOSTopShelfImageLayers: []
   tvOSTopShelfImageWideLayers: []
+=======
+  appleTVSplashScreen2x: {fileID: 0}
+  tvOSSmallIconLayers: []
+  tvOSSmallIconLayers2x: []
+  tvOSLargeIconLayers: []
+  tvOSLargeIconLayers2x: []
+  tvOSTopShelfImageLayers: []
+  tvOSTopShelfImageLayers2x: []
+  tvOSTopShelfImageWideLayers: []
+  tvOSTopShelfImageWideLayers2x: []
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   iOSLaunchScreenType: 0
   iOSLaunchScreenPortrait: {fileID: 0}
   iOSLaunchScreenLandscape: {fileID: 0}
@@ -202,6 +298,11 @@ PlayerSettings:
   iOSLaunchScreeniPadFillPct: 100
   iOSLaunchScreeniPadSize: 100
   iOSLaunchScreeniPadCustomXibPath: 
+<<<<<<< HEAD
+=======
+  iOSUseLaunchScreenStoryboard: 0
+  iOSLaunchScreenCustomStoryboardPath: 
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   iOSDeviceRequirements: []
   iOSURLSchemes: []
   iOSBackgroundModes: 0
@@ -213,6 +314,10 @@ PlayerSettings:
   iOSManualSigningProvisioningProfileID: 
   tvOSManualSigningProvisioningProfileID: 
   appleEnableAutomaticSigning: 0
+<<<<<<< HEAD
+=======
+  clonedFromGUID: 00000000000000000000000000000000
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -220,7 +325,13 @@ PlayerSettings:
   AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
+<<<<<<< HEAD
   androidEnableBanner: 1
+=======
+  AndroidEnableTango: 0
+  androidEnableBanner: 1
+  androidUseLowAccuracyLocation: 0
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -231,10 +342,22 @@ PlayerSettings:
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings: []
+<<<<<<< HEAD
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
+=======
+  m_BuildTargetEnableVuforiaSettings: []
+  openGLRequireES31: 0
+  openGLRequireES31AEP: 0
+  m_TemplateCustomTags: {}
+  mobileMTRendering:
+    Android: 1
+    iPhone: 1
+    tvOS: 1
+  m_BuildTargetGroupLightmapEncodingQuality: []
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   wiiUTitleID: 0005000011000000
   wiiUGroupID: 00010000
   wiiUCommonSaveSize: 4096
@@ -281,6 +404,12 @@ PlayerSettings:
   switchTitleNames_9: 
   switchTitleNames_10: 
   switchTitleNames_11: 
+<<<<<<< HEAD
+=======
+  switchTitleNames_12: 
+  switchTitleNames_13: 
+  switchTitleNames_14: 
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   switchPublisherNames_0: 
   switchPublisherNames_1: 
   switchPublisherNames_2: 
@@ -293,6 +422,12 @@ PlayerSettings:
   switchPublisherNames_9: 
   switchPublisherNames_10: 
   switchPublisherNames_11: 
+<<<<<<< HEAD
+=======
+  switchPublisherNames_12: 
+  switchPublisherNames_13: 
+  switchPublisherNames_14: 
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   switchIcons_0: {fileID: 0}
   switchIcons_1: {fileID: 0}
   switchIcons_2: {fileID: 0}
@@ -305,6 +440,12 @@ PlayerSettings:
   switchIcons_9: {fileID: 0}
   switchIcons_10: {fileID: 0}
   switchIcons_11: {fileID: 0}
+<<<<<<< HEAD
+=======
+  switchIcons_12: {fileID: 0}
+  switchIcons_13: {fileID: 0}
+  switchIcons_14: {fileID: 0}
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   switchSmallIcons_0: {fileID: 0}
   switchSmallIcons_1: {fileID: 0}
   switchSmallIcons_2: {fileID: 0}
@@ -317,6 +458,12 @@ PlayerSettings:
   switchSmallIcons_9: {fileID: 0}
   switchSmallIcons_10: {fileID: 0}
   switchSmallIcons_11: {fileID: 0}
+<<<<<<< HEAD
+=======
+  switchSmallIcons_12: {fileID: 0}
+  switchSmallIcons_13: {fileID: 0}
+  switchSmallIcons_14: {fileID: 0}
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   switchManualHTML: 
   switchAccessibleURLs: 
   switchLegalInformation: 
@@ -358,6 +505,11 @@ PlayerSettings:
   switchLocalCommunicationIds_7: 
   switchParentalControl: 0
   switchAllowsScreenshot: 1
+<<<<<<< HEAD
+=======
+  switchAllowsVideoCapturing: 1
+  switchAllowsRuntimeAddOnContentInstall: 0
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   switchDataLossConfirmation: 0
   switchSupportedNpadStyles: 3
   switchSocketConfigEnabled: 0
@@ -384,11 +536,20 @@ PlayerSettings:
   ps4VideoOutPixelFormat: 0
   ps4VideoOutInitialWidth: 1920
   ps4VideoOutBaseModeInitialWidth: 1920
+<<<<<<< HEAD
   ps4VideoOutReprojectionRate: 120
+=======
+  ps4VideoOutReprojectionRate: 60
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   ps4PronunciationXMLPath: 
   ps4PronunciationSIGPath: 
   ps4BackgroundImagePath: 
   ps4StartupImagePath: 
+<<<<<<< HEAD
+=======
+  ps4StartupImagesFolder: 
+  ps4IconImagesFolder: 
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   ps4SaveDataImagePath: 
   ps4SdkOverride: 
   ps4BGMPath: 
@@ -407,7 +568,11 @@ PlayerSettings:
   ps4DownloadDataSize: 0
   ps4GarlicHeapSize: 2048
   ps4ProGarlicHeapSize: 2560
+<<<<<<< HEAD
   ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
+=======
+  ps4Passcode: nKaKU1q6hUYna8XwIuLZgVjQgT86tqdf
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -453,7 +618,11 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
+<<<<<<< HEAD
   psp2PackagePassword: F69AzBlax3CF3EDNhm3soLBPh71Yexui
+=======
+  psp2PackagePassword: ABzcDpguHEfsKCmb46Aibu8GNGKF4xuE
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
@@ -508,14 +677,22 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD
   metroPackageName: Tbartle's Aquatic Adventure
+=======
+  metroPackageName: Superhero Powerspike
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD
   metroApplicationDescription: Tbartle's Aquatic Adventure
+=======
+  metroApplicationDescription: Superhero Powerspike
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -553,12 +730,15 @@ PlayerSettings:
   n3dsTitle: GameName
   n3dsProductCode: 
   n3dsApplicationId: 0xFF3FF
+<<<<<<< HEAD
   stvDeviceAddress: 
   stvProductDescription: 
   stvProductAuthor: 
   stvProductAuthorEmail: 
   stvProductLink: 
   stvProductCategory: 0
+=======
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   XboxOneProductId: 
   XboxOneUpdateKey: 
   XboxOneSandboxId: 
@@ -586,6 +766,7 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
+<<<<<<< HEAD
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
@@ -593,6 +774,14 @@ PlayerSettings:
   cloudProjectId: 146776bb-8c6f-4c52-9269-4abf13c26017
   projectName: Tbartle's Aquatic Adventure
   organizationId: marsg
+=======
+  cloudServicesEnabled: {}
+  facebookSdkVersion: 7.9.4
+  apiCompatibilityLevel: 2
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
+>>>>>>> a38ba88fa8c147114c99570feaff5ff70383fc08
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
