@@ -236,6 +236,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114234795786630630, guid: 775d08194346c6b4da6798e46e0ecea7,
+        type: 2}
+      propertyPath: scrollSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432280948164240, guid: 775d08194346c6b4da6798e46e0ecea7,
+        type: 2}
+      propertyPath: timeBetweenTiles
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 775d08194346c6b4da6798e46e0ecea7, type: 2}
   m_IsPrefabParent: 0
