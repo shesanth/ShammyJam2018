@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour {
     }
 
     //function to call to deal damage to enemy
-    private void takeDamage(float damage)
+    public void takeDamage(float damage)
     {
         health -= damage;
 

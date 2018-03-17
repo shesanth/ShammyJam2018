@@ -18,7 +18,7 @@ public class EnemyWalkShoot : MonoBehaviour {
     //positions he moves between
     public GameObject startPosition;
     public GameObject endPosition;
-    public float timeToTraverse = 2f;
+    public float speed = 2f;
     int directionFacing;
     Vector3 destination;
 
@@ -45,7 +45,7 @@ public class EnemyWalkShoot : MonoBehaviour {
         {
             if (transform.position != destination)
             {
-                transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * timeToTraverse);
+                transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * speed);
             }
             else
             {
