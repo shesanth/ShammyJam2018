@@ -6,7 +6,6 @@ public class PlayerHealth : MonoBehaviour
 {
 
     private float health = 100.0f;
-
     public float iTime = 2.0f; //time iframes last
     private bool isInvincible = false;
     // Use this for initialization

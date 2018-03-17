@@ -22,4 +22,20 @@ public class Enemy : MonoBehaviour {
             collision.gameObject.GetComponent<PlayerHealth>().takeDamage(20.0f);
         }
     }
+
+    //function to call to deal damage to enemy
+    private void takeDamage(float damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            KillObject();
+        }
+    }
+
+    private void KillObject()
+    {
+        //TODO: add in death logic
+    }
 }
