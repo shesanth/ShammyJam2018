@@ -144,6 +144,51 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+  jumpTime: 0.5
+  jumpHeight: 2.5
+  maxFallSpeed: 5
+  gravCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: -0.004180908
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.13437687
+      value: 1.014496
+      inSlope: -0.07465482
+      outSlope: -0.07465482
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.574499
+      value: 1.0088996
+      inSlope: 0.008940697
+      outSlope: 0.008940697
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.65391153
+      value: 0.9839399
+      inSlope: -1.7309189
+      outSlope: -1.7309189
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.9999819
+      value: -0.019495402
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  variableJumpCutoffSpeed: 1
+  groundedSlope: 0.75
+  maxGroundedBuffer: 0.2
+  maxJumpBuffer: 0.2
+  unLockedJump: 0
+  dJumpModifier: 0.8
 --- !u!136 &136633924621314178
 CapsuleCollider:
   m_ObjectHideFlags: 1
