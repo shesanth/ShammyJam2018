@@ -17,7 +17,7 @@ public class Shoot : MonoBehaviour {
     public void DoShoot()
     {
         GameObject b = Instantiate(bullet, this.transform.position, Quaternion.identity);
-
+        b.GetComponent<DestroyOnHit>().shooter = player;
         b.GetComponent<Rigidbody>().velocity = player.directionFacing * Vector3.right * bulletSpeed;
     }
 
