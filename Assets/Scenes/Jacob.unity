@@ -369,6 +369,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeUntilTeleport: 5
+  shotDelay: 1
+  numPerBurst: 3
+  timeBetweenBurstShots: 0.3
   teleportPositions:
   - {fileID: 166411331}
   - {fileID: 1591374105}
@@ -453,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1985831202774162, guid: 20f5d51e96d0342479805ef360ad9ae8, type: 2}
-  bulletSpeed: 1
+  bulletSpeed: 5
 --- !u!1 &1114715564
 GameObject:
   m_ObjectHideFlags: 0
