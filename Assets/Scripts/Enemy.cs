@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    private float health;
+    private float health = 100;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,15 +12,14 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         //check if collision is the player, if so, deal damage to the player
         if (collision.gameObject.GetComponent<PlayerMovement>())
         {
-            
+            collision.gameObject.GetComponent<PlayerHealth>().takeDamage(20.0f);
         }
     }
 }
