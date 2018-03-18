@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     public float dJumpModifier = 0.9f;//float that modifies the height of dj compared to jump
 
     //teleport
+    public bool unLockedTeleport= false; //bool if teleport unlocked
     public float teleportDistance = 5f;
     public float teleportDelay = 1.5f;
     float nextTeleportAvailable = 0;
@@ -67,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
             playerShoot.DoShoot();
         }
 
-        if (nextTeleportAvailable <= 0 && Input.GetButtonDown("Fire3"))//left shift
+        if (unLockedTeleport && nextTeleportAvailable <= 0 && Input.GetButtonDown("Fire3"))//left shift
         {
             nextTeleportAvailable = teleportDelay;
             Vector3 teleport = this.transform.position;
