@@ -1,17 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // Required when Using UI elements.
+
 
 public class Enemy : MonoBehaviour {
 
     public float health = 100;
+
+    private float startHealth;
+
+    public Slider slider;
+
 	// Use this for initialization
 	void Start () {
-		
+        slider = GetComponentInChildren<Slider>();
+        startHealth = health;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        slider.value = health / startHealth;
 	}
 
     private void OnTriggerEnter(Collider collision)
