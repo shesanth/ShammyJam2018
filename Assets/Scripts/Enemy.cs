@@ -7,7 +7,7 @@ using UnityEngine.UI; // Required when Using UI elements.
 public class Enemy : MonoBehaviour {
 
     public float health = 100;
-
+    public float damage = 20;
     private float startHealth;
 
     public Slider slider;
