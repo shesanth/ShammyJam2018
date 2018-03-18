@@ -4114,11 +4114,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114876285971447754, guid: bb539e42a9cbfb9449e2b37ea85b5ba2,
+    - target: {fileID: 114951242814157972, guid: bb539e42a9cbfb9449e2b37ea85b5ba2,
         type: 2}
       propertyPath: m_Text
-      value: Man my device malfunctioned. It seems now I can double jump instead of
-        Kangaroo-Man's super bouncing.
+      value: Press A to continue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb539e42a9cbfb9449e2b37ea85b5ba2, type: 2}

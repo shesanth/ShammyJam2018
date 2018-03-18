@@ -2684,6 +2684,11 @@ Prefab:
         through me. I bet if I started running right into enemies they wouldn't even
         be able to hurt.
       objectReference: {fileID: 0}
+    - target: {fileID: 114951242814157972, guid: bb539e42a9cbfb9449e2b37ea85b5ba2,
+        type: 2}
+      propertyPath: m_Text
+      value: Press A to continue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb539e42a9cbfb9449e2b37ea85b5ba2, type: 2}
   m_IsPrefabParent: 0
