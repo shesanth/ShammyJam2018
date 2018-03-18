@@ -3726,6 +3726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1944389527995356, guid: d19498c6af7c9be468541ddce08b0fe2, type: 2}
+  shootAudio: {fileID: 0}
   bulletSpeed: 15
 --- !u!114 &763346819
 MonoBehaviour:
@@ -3739,6 +3740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05563c87a97aa486e8e9fc8f40970cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSound: {fileID: 0}
   maxSpeed: 15
   acceleration: 35
   animCurve:
@@ -9536,11 +9538,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1cc6e1f96e256164fb0d53e0829743b0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1514f2b740998d8439658ee61f5202ac, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.524
+  m_Volume: 0.711
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
