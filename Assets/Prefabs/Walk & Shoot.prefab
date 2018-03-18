@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 135911286206393476}
   - component: {fileID: 23872064791120292}
   - component: {fileID: 114927283816647836}
+  - component: {fileID: 114622713798336818}
   m_Layer: 0
   m_Name: Walk & Shoot
   m_TagString: Untagged
@@ -84,6 +85,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1546203415544450}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114622713798336818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546203415544450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0381681cbdbcfa43ad5e3eebe73c99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  damage: 10
+  slider: {fileID: 0}
 --- !u!114 &114927283816647836
 MonoBehaviour:
   m_ObjectHideFlags: 1
