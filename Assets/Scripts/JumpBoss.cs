@@ -9,17 +9,16 @@ public class JumpBoss : MonoBehaviour {
     public float maxMoveDist; //maximum distance the boss is allowed to jump
 
     private bool isJumping = false; //bool to prevent mutliple coroutine calls
-    private Rigidbody rb;
     private Transform tf;
 	// Use this for initialization
 	void Start () {
-        rb = GetComponent<Rigidbody>();
         tf = GetComponent<Transform>();
         //StartCoroutine(Jump(5.0f));
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        
         int faceLeft = 1;
         float xDistToPlayer = tf.position.x - player.GetComponent<Transform>().position.x;
         //first, calculate direction of player
@@ -34,13 +33,11 @@ public class JumpBoss : MonoBehaviour {
         if (!isJumping)
         {
             //distance the boss will move towards the player
-            float moveX = Random.Range(Mathf.Abs(xDistToPlayer)/4, Mathf.Abs(xDistToPlayer) + 2) * faceLeft;
+            float moveX = Random.Range(Mathf.Abs(xDistToPlayer)/2, Mathf.Abs(xDistToPlayer) + 2) * faceLeft;
             StartCoroutine(Jump(moveX));
         }
 
-
-
-	}
+    }
 
     //coroutine that will move the boss
     private IEnumerator Jump(float moveX)
