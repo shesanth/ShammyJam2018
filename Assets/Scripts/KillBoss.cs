@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillBoss : MonoBehaviour {
 
@@ -17,7 +18,11 @@ public class KillBoss : MonoBehaviour {
     {
         if (other.gameObject.GetComponent<PlayerHealth>())
         {
-            Destroy(this.gameObject);
+                int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+                if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+                {
+                    SceneManager.LoadScene(nextSceneIndex);
+                }
         }
     }
 }

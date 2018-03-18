@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void playNext(){
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene(1);
 	}
 
 	public void quit(){
