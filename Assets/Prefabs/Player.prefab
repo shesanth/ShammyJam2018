@@ -7931,7 +7931,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1730658912134848}
   m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.62, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4758575944976450}
@@ -8585,7 +8585,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728865711806496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.5, y: -8.3, z: 0}
+  m_LocalPosition: {x: 122.25209, y: -10.369154, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_Children:
   - {fileID: 224812431302455238}
@@ -10395,9 +10395,9 @@ MonoBehaviour:
   groundedSlope: 0.75
   maxGroundedBuffer: 0.2
   maxJumpBuffer: 0.2
-  unLockedJump: 0
-  dJumpModifier: 0.8
-  unLockedTeleport: 0
+  unLockedJump: 1
+  dJumpModifier: 1
+  unLockedTeleport: 1
   teleportDistance: 3
   teleportDelay: 1.5
   shootDelay: 0.5

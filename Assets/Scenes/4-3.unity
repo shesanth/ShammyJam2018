@@ -1694,40 +1694,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114671781611200704, guid: f386d6093f83f427c9ab73ec12abaf05,
-        type: 2}
-      propertyPath: unLockedJump
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114671781611200704, guid: f386d6093f83f427c9ab73ec12abaf05,
-        type: 2}
-      propertyPath: dJumpModifier
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224756962478925060, guid: f386d6093f83f427c9ab73ec12abaf05,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224756962478925060, guid: f386d6093f83f427c9ab73ec12abaf05,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224543915502565468, guid: f386d6093f83f427c9ab73ec12abaf05,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224543915502565468, guid: f386d6093f83f427c9ab73ec12abaf05,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114671781611200704, guid: f386d6093f83f427c9ab73ec12abaf05,
-        type: 2}
-      propertyPath: unLockedTeleport
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f386d6093f83f427c9ab73ec12abaf05, type: 2}
@@ -4701,7 +4686,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2142407771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.56448, y: 1.566267, z: 0}
+  m_LocalPosition: {x: 124.56448, y: 0.69, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children:
   - {fileID: 1849117985}
@@ -4718,8 +4703,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.63, z: 1}
+  m_Center: {x: -0.28, y: 1.36, z: 0}
 --- !u!114 &2142407775
 MonoBehaviour:
   m_ObjectHideFlags: 0
