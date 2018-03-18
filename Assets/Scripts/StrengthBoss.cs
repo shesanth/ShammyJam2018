@@ -7,15 +7,32 @@ public class StrengthBoss : MonoBehaviour {
     public List<Vector3> spawnPositions;
     public List<GameObject> TileTypes;
 
+    public GameObject boss;
+
+    public GameObject killBox;
+
     public float timeBetweenTiles = 8f;
     float nextTilesIn = 0f;
 
     public float distanceBetweenTiles;
 
-	// Use this for initialization
-	void Awake() {
-		
-	}
+    // Use this for initialization
+    void Awake()
+    {
+        Vector3 newPos = this.transform.position;
+        newPos.x -= 15;
+        newPos.y += 8;
+        Instantiate(boss, newPos, Quaternion.identity);
+        newPos.x += 15;
+        newPos.y -= 8;
+
+        newPos.x += 10;
+        spawnPositions.Add(newPos);
+        newPos.y += 5;
+        spawnPositions.Add(newPos);
+        newPos.y += 5;
+        spawnPositions.Add(newPos);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,6 +40,9 @@ public class StrengthBoss : MonoBehaviour {
         {
             bool hasGround = false;
             nextTilesIn = timeBetweenTiles;
+            Vector3 killZone = spawnPositions[0];
+            killZone.y -= 1;
+            GameObject k = Instantiate(killBox, killZone, Quaternion.identity);
             for(int i = spawnPositions.Count - 1; i >= 0; i--)
             {
                 int tileType = (int)Random.Range(0, TileTypes.Count - .01f);

@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour {
         PlayerHealth h = collision.gameObject.GetComponent<PlayerHealth>();
         if (h != null)
         {
-            h.takeDamage(20.0f);
+            h.takeDamage(damage);
         }
     }
 

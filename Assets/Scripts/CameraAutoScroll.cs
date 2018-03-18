@@ -11,7 +11,11 @@ public class CameraAutoScroll : MonoBehaviour {
 	void Awake() {
         mainCam = FindObjectOfType<Camera>();
         mainCam.GetComponent<CameraMoveScript>().enabled = false;
-	}
+        Vector3 newCam = mainCam.transform.position;
+        newCam.z = -15f;
+        newCam.y += 2;
+        mainCam.transform.position = newCam;
+    }
 
     void FixedUpdate()
     {
