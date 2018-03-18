@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Required when Using UI elements.
-
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour {
 
@@ -46,9 +46,13 @@ public class Enemy : MonoBehaviour {
 
     void KillObject()
     {
-        if(this.GetComponent<BossTeleport>() || this.GetComponent<JumpBoss>())
+        if(this.GetComponent<BossTeleport>() || this.GetComponent<JumpBoss>() || this.GetComponent<StrengthBossFight>())
         {
-            //go to next scene here
+            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+            {
+                SceneManager.LoadScene(nextSceneIndex);
+            }
         }
         Destroy(this.gameObject);
     }

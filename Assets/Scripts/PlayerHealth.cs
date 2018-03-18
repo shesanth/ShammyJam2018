@@ -6,19 +6,19 @@ using UnityEngine.UI; // Required when Using UI elements.
 
 public class PlayerHealth : MonoBehaviour
 {
-
-    private float health = 100.0f;
+    public float startHealth = 100f;
+    float health;
     public float iTime = 2.0f; //time iframes last
     private bool isInvincible = false;
 
-    private float startHealth;
+    
 
     public Slider slider;
     // Use this for initialization
     void Start()
     {
         slider = GetComponentInChildren<Slider>();
-        startHealth = health;
+        health = startHealth;
     }
 
     // Update is called once per frame
