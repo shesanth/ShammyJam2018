@@ -1183,6 +1183,16 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114671781611200704, guid: f386d6093f83f427c9ab73ec12abaf05,
+        type: 2}
+      propertyPath: unLockedTeleport
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114671781611200704, guid: f386d6093f83f427c9ab73ec12abaf05,
+        type: 2}
+      propertyPath: unLockedJump
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f386d6093f83f427c9ab73ec12abaf05, type: 2}
   m_IsPrefabParent: 0
