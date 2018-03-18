@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
 	public GameObject mainPanel;
 	public GameObject creditsPanel;
+	public GameObject controlsPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +27,15 @@ public class MainMenu : MonoBehaviour {
 	public void deactivateCredits(){
 		mainPanel.SetActive(true);
 		creditsPanel.SetActive(false);
+	}
+
+	public void activateControls(){
+		mainPanel.SetActive(false);
+		controlsPanel.SetActive(true);
+	}
+
+	public void playNext(){
+		SceneManager.LoadScene (0);
 	}
 
 	public void quit(){
