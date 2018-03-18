@@ -30,6 +30,10 @@ public class SpawnJumpBoss : MonoBehaviour {
 
     public void SpawnBoss()
     {
-        SceneManager.LoadScene("mars");
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
     }
 }

@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour {
 
     void KillObject()
     {
-        if(this.GetComponent<BossTeleport>() || this.GetComponent<JumpBoss>() || this.GetComponent<StrengthBossFight>())
+        if(this.GetComponent<BossTeleport>() || this.GetComponent<JumpBoss>() || this.GetComponent<StrengthBossFight>() || this.GetComponent<MoveBossUp>())
         {
             int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
             if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
