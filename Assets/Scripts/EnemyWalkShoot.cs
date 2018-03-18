@@ -26,7 +26,7 @@ public class EnemyWalkShoot : MonoBehaviour {
 
     void Awake()
     {
-        this.transform.position = startPosition.transform.position;
+        //this.transform.position = startPosition.transform.position;
         target = FindObjectOfType<PlayerMovement>().transform;
         destination = endPosition.transform.position;
         if(destination.x < this.transform.position.x)
