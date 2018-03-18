@@ -48,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
     float nextshotAvailable = 0;
 
 
+    public int levelNum = 5;
+
     // Use this for initialization
     void Awake()
     {
