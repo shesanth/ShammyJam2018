@@ -10,9 +10,11 @@ public class JumpBoss : MonoBehaviour {
 
     private bool isJumping = false; //bool to prevent mutliple coroutine calls
     private Transform tf;
+    private Vector3 startPosTrue;
 	// Use this for initialization
 	void Start () {
         tf = GetComponent<Transform>();
+        startPosTrue = tf.position;
         //StartCoroutine(Jump(5.0f));
 	}
 	
@@ -35,6 +37,10 @@ public class JumpBoss : MonoBehaviour {
             //distance the boss will move towards the player
             float moveX = Random.Range(Mathf.Abs(xDistToPlayer)/2, Mathf.Abs(xDistToPlayer) + 2) * faceLeft;
             StartCoroutine(Jump(moveX));
+        }
+        else
+        {
+            tf.position = startPosTrue;
         }
 
     }

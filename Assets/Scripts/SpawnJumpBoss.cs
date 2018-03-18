@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnJumpBoss : MonoBehaviour {
 
@@ -29,7 +30,6 @@ public class SpawnJumpBoss : MonoBehaviour {
 
     public void SpawnBoss()
     {
-        barrier.SetActive(true);
-        boss.SetActive(true);
+        SceneManager.LoadScene("mars");
     }
 }

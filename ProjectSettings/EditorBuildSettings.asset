@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/1_1.unity
+    guid: 33cbef2f602f75c4e81adceea7f77409
+  - enabled: 1
+    path: Assets/Scenes/mars.unity
+    guid: 295fafc0aa8035d46b499fe4eee3f0ee
