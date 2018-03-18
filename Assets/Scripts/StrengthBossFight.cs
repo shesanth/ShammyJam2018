@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class StrengthBossFight : MonoBehaviour {
 
-    float speed;
+    public float speed;
+    Animator animator;
+
 	// Use this for initialization
 	void Awake() {
         speed = FindObjectOfType<CameraAutoScroll>().scrollSpeed;
+        animator = GetComponent<Animator>();
+        animator.SetTrigger("run");
 	}
 	
 	// Update is called once per frame
