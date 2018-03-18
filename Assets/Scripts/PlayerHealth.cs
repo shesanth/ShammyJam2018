@@ -24,6 +24,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            KillPlayer();
+        }
         slider.value = health / startHealth;
     }
 
