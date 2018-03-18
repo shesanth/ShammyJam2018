@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     Rigidbody rigid;
+    Animator animator;
 
     //Horizontal
     public float maxSpeed = 20f;
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigid = this.GetComponent<Rigidbody>();
         playerShoot = this.GetComponent<Shoot>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -112,16 +114,30 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 velocity = rigid.velocity;
+        Vector3 targetAngles;
 
         //Horizontal Movement
         float xInput = Input.GetAxis("Horizontal");
         if (xInput > 0)
         {
+            animator.SetTrigger("run");
+            if (directionFacing != 1){
+                targetAngles = transform.eulerAngles + 180f * Vector3.up;
+                transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, targetAngles, 180f * Time.deltaTime);
+            }
             directionFacing = 1;
         }
         else if (xInput < 0)
         {
+            if (directionFacing != -1){
+                targetAngles = transform.eulerAngles + 180f * Vector3.up;
+                transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, targetAngles, 180f * Time.deltaTime);
+            }
+            animator.SetTrigger("run");
             directionFacing = -1;
+        }
+        else if (xInput == 0) {
+            animator.SetTrigger("idle");
         }
         /*
         float targetSpeed = xInput * maxSpeed;
@@ -138,6 +154,7 @@ public class PlayerMovement : MonoBehaviour
         float gravity = -10 * gravCurve.Evaluate(velocity.y / jumpPower);
         if (!Input.GetButton("Jump") && velocity.y > variableJumpCutoffSpeed)
         {
+            //animator.SetTrigger("idle");
             gravity *= 5;
         }
         velocity.y += gravity * Time.deltaTime;
@@ -146,6 +163,7 @@ public class PlayerMovement : MonoBehaviour
         // Jump
         if (jumpBuffer > 0 && groundedBuffer > 0)
         {
+            animator.SetTrigger("jump");
             velocity.y = jumpPower;
             jumpBuffer = 0;
             groundedBuffer = 0;
