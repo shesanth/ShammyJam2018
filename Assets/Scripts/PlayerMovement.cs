@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rigid;
     Animator animator;
 
+    public AudioClip jumpSound;
+
     //Horizontal
     public float maxSpeed = 20f;
     public float acceleration = 35f;
@@ -163,6 +165,10 @@ public class PlayerMovement : MonoBehaviour
         // Jump
         if (jumpBuffer > 0 && groundedBuffer > 0)
         {
+            if (jumpSound)
+            {
+                AudioSource.PlayClipAtPoint(jumpSound, GetComponent<Transform>().position);
+            }
             animator.SetTrigger("jump");
             velocity.y = jumpPower;
             jumpBuffer = 0;
@@ -172,6 +178,10 @@ public class PlayerMovement : MonoBehaviour
         //double jump
         else if (jumpBuffer > 0 && hasDoubleJump && unLockedJump)
         {
+            if (jumpSound)
+            {
+                AudioSource.PlayClipAtPoint(jumpSound, GetComponent<Transform>().position);
+            }
             velocity.y = dJumpModifier * jumpPower;
             jumpBuffer = 0;
             hasDoubleJump = false;

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Shoot : MonoBehaviour {
     public GameObject bullet;
-
+    public AudioClip shootAudio;
     public float bulletSpeed = 5f;
 
     PlayerMovement player;
@@ -18,6 +19,10 @@ public class Shoot : MonoBehaviour {
 
     public void DoShoot()
     {
+        if (shootAudio)
+        {
+            AudioSource.PlayClipAtPoint(shootAudio, GetComponent<Transform>().position);
+        }
         GameObject b = Instantiate(bullet, this.transform.position, Quaternion.identity);
         b.GetComponent<DestroyOnHit>().shooter = player;
         b.GetComponent<Rigidbody>().velocity = player.directionFacing * Vector3.right * bulletSpeed;
