@@ -423,6 +423,16 @@ Prefab:
       propertyPath: unLockedJump
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224756962478925060, guid: f386d6093f83f427c9ab73ec12abaf05,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224756962478925060, guid: f386d6093f83f427c9ab73ec12abaf05,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f386d6093f83f427c9ab73ec12abaf05, type: 2}
   m_IsPrefabParent: 0
@@ -464,6 +474,16 @@ Prefab:
     - target: {fileID: 4613098110067408, guid: 50768e9044d7b574b9efb75bd87d2b04, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224424431959560088, guid: 50768e9044d7b574b9efb75bd87d2b04,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224424431959560088, guid: 50768e9044d7b574b9efb75bd87d2b04,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50768e9044d7b574b9efb75bd87d2b04, type: 2}
