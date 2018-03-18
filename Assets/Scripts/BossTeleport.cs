@@ -16,6 +16,8 @@ public class BossTeleport : MonoBehaviour
     public float timeBetweenBurstShots = .3f;
     bool hasShot = false;
     
+    Animator animator;
+
     //direction
     [HideInInspector]
     public int directionFacing;
@@ -30,10 +32,12 @@ public class BossTeleport : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
+        animator = GetComponent<Animator>();
         nextTeleport = timeUntilTeleport;
         nextShot = shotDelay;
         this.transform.position = teleportPositions[0].transform.position;
         player = FindObjectOfType<PlayerMovement>().transform;
+        animator.SetTrigger("idle");
     }
 
     // Update is called once per frame
