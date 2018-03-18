@@ -7,6 +7,8 @@ public class StrengthBoss : MonoBehaviour {
     public List<Vector3> spawnPositions;
     public List<GameObject> TileTypes;
 
+    public GameObject boss;
+
     public GameObject killBox;
 
     public float timeBetweenTiles = 8f;
@@ -18,6 +20,12 @@ public class StrengthBoss : MonoBehaviour {
     void Awake()
     {
         Vector3 newPos = this.transform.position;
+        newPos.x -= 15;
+        newPos.y += 8;
+        Instantiate(boss, newPos, Quaternion.identity);
+        newPos.x += 15;
+        newPos.y -= 8;
+
         newPos.x += 10;
         spawnPositions.Add(newPos);
         newPos.y += 5;
