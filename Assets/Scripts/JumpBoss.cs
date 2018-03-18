@@ -11,10 +11,18 @@ public class JumpBoss : MonoBehaviour {
     private bool isJumping = false; //bool to prevent mutliple coroutine calls
     private Transform tf;
     private Vector3 startPosTrue;
-	// Use this for initialization
+	
+    Animator animator;
+
+    void Awake(){
+        animator = GetComponent<Animator>();
+    }
+
+    // Use this for initialization
 	void Start () {
         tf = GetComponent<Transform>();
         startPosTrue = tf.position;
+        animator.SetTrigger("run");
         //StartCoroutine(Jump(5.0f));
 	}
 	
@@ -49,6 +57,7 @@ public class JumpBoss : MonoBehaviour {
     private IEnumerator Jump(float moveX)
     {
         isJumping = true;
+        animator.SetTrigger("jump");
         Vector3 startPos = tf.position;
         Vector3 endPos = new Vector3(tf.position.x + moveX, tf.position.y, tf.position.z);
         for (float i = 0; i < averageJumpTime; i += Time.deltaTime)
@@ -62,6 +71,7 @@ public class JumpBoss : MonoBehaviour {
             yield return null;
         }
         isJumping = false;
+        animator.SetTrigger("run");
         yield return null;
     }
 }

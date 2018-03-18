@@ -12,6 +12,7 @@ public class SpawnStrengthBoss : MonoBehaviour {
     void Awake()
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
+        
     }
 
     private void OnTriggerEnter(Collider other)
