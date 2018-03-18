@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54450242456476534}
   - component: {fileID: 65705412046014340}
   m_Layer: 0
-  m_Name: Floating Wall
+  m_Name: borked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
