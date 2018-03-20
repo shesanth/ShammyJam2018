@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/New Folder/Level 5.unity
+- path: Assets/Scenes/strength boss test.unity
   isLoaded: 1
   isActive: 1
